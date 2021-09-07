@@ -29,10 +29,10 @@ const Admin = () => {
       {isAdmin ? <div>
         <ul>
           <li>
-            <Link to={`${url}/addBlog`}>Add Blog</Link>
+            <Link to={`${url}/addBlog`}>Add News</Link>
           </li>
           <li>
-            <Link to={`${url}/manageBlog`}>Manage Blog</Link>
+            <Link to={`${url}/manageBlog`}>Manage News</Link>
           </li>
           <li>
             <Link to={`${url}/addAdmin`}>Add Admin</Link>
