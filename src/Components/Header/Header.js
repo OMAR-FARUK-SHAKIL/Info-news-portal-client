@@ -19,7 +19,7 @@ const Header = () => {
         <Nav className="m-auto">
           <Nav.Link className="font-weight-bold" as={Link} to="/home"> All News</Nav.Link>
           <Nav.Link className="font-weight-bold ml-1" as={Link} to="/home"> Domestic News</Nav.Link>
-          <Nav.Link className="font-weight-bold ml-1" as={Link} to="/home"> International News</Nav.Link>
+          <Nav.Link className="font-weight-bold ml-1" as={Link} to="/international"> International News</Nav.Link>
           <Nav.Link className="font-weight-bold ml-1" as={Link} to="/home"> Sports News</Nav.Link>
           <Nav.Link className="font-weight-bold ml-1" as={Link} to="/admin">Admin</Nav.Link>
           <Button className="btn-success font-weight-bold ml-2" as={Link} to="/logIn">LogIn</Button>

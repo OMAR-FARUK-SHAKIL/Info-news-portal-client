@@ -1,7 +1,6 @@
 import React from "react";
 import Blogs from "../Blogs/Blogs";
 import Slideshow from "./Slideshow";
-// import img3 from "../../../images/slide_4.jpg";
 import "./Home.css";
 
 const Home = () => {

@@ -65,12 +65,12 @@ const AddBlog = () => {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridNumber">
-            <Form.Label>Author Name</Form.Label>
+            <Form.Label>Author Name and Date</Form.Label>
             <Form.Control
               type="text"
               onBlur={handleBlur}
               name="author"
-              placeholder="Enter the author name"
+              placeholder="Enter the author name,date ,location"
             />
           </Form.Group>
         </Form.Row>
@@ -92,7 +92,7 @@ const AddBlog = () => {
               onBlur={handleBlur}
               name="description"
               className="form-control"
-              placeholder="description"
+              placeholder="category"
               aria-label="With textarea"
             ></textarea>
           </Form.Group>
