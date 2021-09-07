@@ -22,6 +22,29 @@ const LogIn = () => {
   
     const [newUser, setNewUser] = useState(false);
 
+    const handleGoogleSignIn = () => {
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().signInWithPopup(provider).then(function (result) {
+        const { displayName, email } = result.user;
+        const signedInUser = { name: displayName, email }
+        setLoggedInUser(signedInUser);
+        storeAuthToken();
+      }).catch(function (error) {
+        const errorMessage = error.message;
+        console.log(errorMessage);
+      });
+    }
+  
+    const storeAuthToken = () => {
+      firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
+        .then(function (idToken) {
+          sessionStorage.setItem('token', idToken);
+          history.replace(from);
+        }).catch(function (error) {
+          // Handle error
+        });
+    }
+
     const {
         register,
         handleSubmit,
@@ -130,6 +153,12 @@ const LogIn = () => {
             </p>
           )}
         </div>
+
+          <div className="from-group mt-5 mb-5 m-auto text-center">
+            <button className="btn btn-warning mb-3 mt-1" onClick={handleGoogleSignIn}>Login With Google</button>
+          </div>
+       
+
       </div>
     );
 };

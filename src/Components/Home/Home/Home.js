@@ -1,5 +1,7 @@
 import React from "react";
 import Blogs from "../Blogs/Blogs";
+import Slideshow from "./Slideshow";
+// import img3 from "../../../images/slide_4.jpg";
 import "./Home.css";
 
 const Home = () => {
@@ -7,7 +9,8 @@ const Home = () => {
     <div>
       <div className="feature-image">
         <div className="feature-text">
-          <h1 className="heading">Welcome to the blog site </h1>
+          <Slideshow/>
+          <h1 className="heading">Welcome to the Info-News Portal  </h1>
         </div>
       </div>
       <Blogs />

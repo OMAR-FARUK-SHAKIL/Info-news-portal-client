@@ -11,6 +11,7 @@ import { createContext } from "react";
 import { useState } from "react";
 import PrivateRoute from "./Components/LogIn/PrivateRoute/PrivateRoute";
 import Admin from "./Components/Admin/Admin";
+import AddAdmin from "./Components/Admin/AddAdmin/AddAdmin";
 
 export const UserContext = createContext();
 function App() {
@@ -29,6 +30,9 @@ function App() {
           <PrivateRoute path="/admin">
             <Admin />
           </PrivateRoute>
+          <Route path="/addAdmin">
+            <AddAdmin></AddAdmin>
+          </Route>
           <Route path="/blogs/:id">
             <SingleBlogs />
           </Route>
