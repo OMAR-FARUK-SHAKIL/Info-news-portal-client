@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AllBlog from "../AllBlog/AllBlog";
-const Blogs = () => {
+
+const Blogs = ({category}) => {
   const [blog, setBlog] = useState([]);
 
   useEffect(() => {
@@ -26,9 +27,18 @@ const Blogs = () => {
             </div>
           )}
 
-          {blog.map((pd) => (
+          {category==='all' && blog.map((pd) => (
             <AllBlog blog={pd} key={pd._id}></AllBlog>
           ))}
+
+          {category==='top' && blog.slice(-6).map((pd) => (
+            <AllBlog blog={pd} key={pd._id}></AllBlog>
+          ))}
+
+           {blog.filter(bg => bg.category === category).map((pd) => (
+            <AllBlog blog={pd} key={pd._id}></AllBlog>
+          ))}
+
         </div>
       </div>
     </section>

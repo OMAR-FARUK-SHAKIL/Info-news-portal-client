@@ -32,6 +32,7 @@ const AddBlog = () => {
       title: info.title,
       author: info.author,
       description: info.description,
+      category: info.category,
       img: file,
     };
 
@@ -60,7 +61,7 @@ const AddBlog = () => {
               type="text"
               onBlur={handleBlur}
               name="title"
-              placeholder="Enter the blog title"
+              placeholder="Enter the News title"
             />
           </Form.Group>
 
@@ -90,9 +91,9 @@ const AddBlog = () => {
             <Form.Label>Write the news category</Form.Label>
             <textarea
               onBlur={handleBlur}
-              name="description"
+              name="category"
               className="form-control"
-              placeholder="category"
+              placeholder="Enter category"
               aria-label="With textarea"
             ></textarea>
           </Form.Group>

@@ -12,6 +12,10 @@ import { useState } from "react";
 import PrivateRoute from "./Components/LogIn/PrivateRoute/PrivateRoute";
 import Admin from "./Components/Admin/Admin";
 import AddAdmin from "./Components/Admin/AddAdmin/AddAdmin";
+import International from "./Components/Home/category/International/International";
+import Domestic from "./Components/Home/category/Domestic/Domestic";
+import Sports from "./Components/Home/category/sports/Sports";
+import TopNews from "./Components/Home/category/TopNews/TopNews";
 
 export const UserContext = createContext();
 function App() {
@@ -28,7 +32,15 @@ function App() {
             <LogIn />
           </Route>
           <Route path="/international">
-            <Home/>
+            <International/>
+          </Route>
+          <Route path="/domestic">
+            <Domestic/>
+          </Route>
+          <Route path="/sports">
+            <Sports/>
+          </Route><Route path="/topNews">
+            <TopNews/>
           </Route>
           <PrivateRoute path="/admin">
             <Admin />

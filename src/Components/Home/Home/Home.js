@@ -4,6 +4,7 @@ import Slideshow from "./Slideshow";
 import "./Home.css";
 
 const Home = () => {
+  let category = "all";
   return (
     <div>
       <div className="feature-image">
@@ -12,7 +13,7 @@ const Home = () => {
           <h1 className="heading">Welcome to the Info-News Portal  </h1>
         </div>
       </div>
-      <Blogs />
+      <Blogs category={category} />
     </div>
   );
 };

@@ -3,9 +3,9 @@ import Blogs from '../../Blogs/Blogs';
 import Slideshow from '../../Home/Slideshow';
 import "../../Home/Home.css";
 
-const International = () => {
+const TopNews = () => {
     const [blog, setBlog] = useState([]);
-    let category ='international';
+    let category ='top';
 
     useEffect(() => {
         fetch("https://young-stream-99018.herokuapp.com/blogs")
@@ -26,4 +26,7 @@ const International = () => {
     );
 };
 
-export default International;
+export default TopNews;
+
+
+
